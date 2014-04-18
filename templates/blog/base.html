@@ -1,24 +1,134 @@
 <!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
 
-<html>
-    <head>
-        <title>{% block title %}My Blog{% endblock %}</title>
-    </head>
+    <!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Wallpoet' rel='stylesheet' type='text/css'>
+    <link href="static/blog/www/css/styles.css" rel="stylesheet">
 
-    <body>
-        <div  id="container">
-	  <h4><a href="{% url 'blog:index'  %}">Home</a></h4>
-	  <div style="width: 70%; float:left" id="posts">{% block post_body %}{% endblock %}</div>
-	  <aside style="width: 20%;float:right; border: solid black 1px">
-	  <h1 style="text-align:center">Tags:</h1>
-	  <ul>
-	    {% for tag in all_tags %}
-	    <li> <a href="{% url 'blog:taged'  tag  %}">{{ tag }}</a></li>
-	    {% endfor %}
-	    
-	  </ul>
-	  </aside>
-	</div>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="wrapper container-fluid">
+      <div class=" row">
+	<div class="col-md-12 header">
 	
-    </body>
+	  <div class="col-md-3" id="imagine">
+	    <div class="row">
+	      <a href="/home/"><img src="/static/blog/www/images/cologo.jpeg" ></a>
+	    </div>
+	  </div>
+
+	</div>
+      
+      </div>
+      
+    <div class="naver row">
+	
+     <nav class="navbar navbar-default" id="navbar " >
+       
+       <ul class="nav navbar-nav ">
+         <li><a href="/home/">Home</a></li>
+         <li><a href="/about/">About us</a></li>
+         <li><a href="/services/">Services</a></li>
+         <li><a href="/partners/">Partners</a></li>
+         <li><a href="/customers/">Customers</a></li>
+         <li><a href="/projects/">Projects</a></li>
+         <li><a href="/careers/">Careers</a></li>
+         <li><a href="/contact/">Contact</a></li>			
+       </ul> 
+     </nav>
+     
+     </div> <!-- naver row --->
+      
+	
+    <div class="col-md-12">
+      
+      <div class="row boder">
+	<div class="line">
+ 
+	  <div class="col-sm-6 col-md-3" id="greenline"> 
+	    <p>FhHFHFH</p>
+	  </div>
+
+	  <div class="col-sm-6 col-md-9" id="blackline"> 
+	    <p>FhHFHFH</p>
+	  </div>
+	</div>
+      
+
+
+
+	<div class="col-md-8 block">
+	  <div class="border"> </div>
+	<div class="row">
+	    <div class="up page-header">
+	      
+	      <h1> <small>Subtext for header</small></h1>
+	    </div>
+	    
+	    <div class="col-md-12 blogs">
+	      <div class="row">
+		   <div class="blog-category col-md-2">
+		     <p>HOMEMADE</p>
+		   </div>
+		 </div>
+	      </div> <!-- col-md-12 blogs -->
+	      
+	
+	    </div>
+      </div> <!--col-md-8-block-->
+      </div>
+      
+    </div><!--col-md-12-->
+      
+      <div class="clearfix visible-xs"></div>
+      
+
+      <div class="row">
+	
+	
+    </div>
+    
+    {% block post %} {% endblock %}
+
+    </div> <!-- container -->
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <script src="{{STATIC_URL}}/blog/www/js/bootstrap.js"></script>
+    <script src="{{STATIC_URL}}/blog/www/js/plugin.js"></script>
+    
+  </body>
 </html>

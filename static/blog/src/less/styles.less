@@ -1,0 +1,87 @@
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+.p-line(@color) {
+    text-align: center;
+    height: 30px;
+    background: @color;
+    margin-bottom: 20px;
+}
+
+
+.block(){
+    border-top: 5px solid black;
+    position: relative;
+}
+.block-inside() {
+    height: 5px;
+    background: @ueba-green;
+    left:0px;
+    width: 45px;
+    position: absolute;
+    margin-top: -5px;
+    
+}
+
+.wrapper {
+ background: @bg-color-main;
+ 
+}
+
+.wrapper .header {
+	height: @h;
+	background-color : @header-bg; 
+
+    }
+.wrapper #imagine{
+    background: red;
+}
+.wrapper img {
+	    height: @h;
+	    width: 270px;
+	    padding-right: -15px;
+	    padding-left: 15px;
+}
+
+
+.wrapper .nav li:hover{
+    background-color: @navbar-default-bg ;
+    
+   
+}
+.wrapper .nav a {text-transform: uppercase;
+            font-size:  22px;
+	    font-weight: 100;
+	    font-family: "Abel" sans-serif;
+    }
+
+.wrapper .navbar {
+    padding-left: @grid-gutter-width * 0.25 + 5.5;
+    
+}
+.foxed {
+    position: fixed; 
+    top: 0; 
+    height: 78px; 
+    z-index: 1;
+}
+
+.wrapper #greenline {
+   .p-line(@ueba-green);
+}
+
+.wrapper #blackline {
+    .p-line(black);
+}
+   
+
+
+
+.block { 
+     .block;
+     margin-top:20px;
+     margin-bottom: 0;
+ }
+ .border {.block-inside;}
+
+.line {margin-bottom:20px;}
