@@ -1,7 +1,7 @@
 # Create your views here.
 #coding: utf-8
-from django.views.generic import ListView
-from blog.models import Post
+from django.views.generic import ListView, DetailView
+from blog.models import Post, Category
 
 
 class CommentTagMixin(object):
@@ -29,5 +29,15 @@ class Posts(ListView):
     paginate_by = 5
 
     def get_queryset(self):
-        queryset = self.model.all().prefetch_related('tags')
+        queryset = self.model.objects.\
+          all().prefetch_related('tags')
         return queryset
+
+
+class PostDetailView(DetailView):
+        model = Post
+        #context_object_name = "post_list"
+        template_name = 'blog/post.html'
+        queryset = Post.objects.all().\
+          prefetch_related('tags')
+

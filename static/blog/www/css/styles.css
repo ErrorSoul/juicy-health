@@ -269,7 +269,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f1e1e2;
 }
 input,
 button,
@@ -310,7 +310,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #ffffff;
+  background-color: #f1e1e2;
   border: 1px solid #dddddd;
   border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1428,7 +1428,7 @@ th {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #ffffff;
+  background-color: #f1e1e2;
 }
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
@@ -3508,7 +3508,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #ffffff;
+  background-color: #f1e1e2;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -3554,7 +3554,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #ffffff;
+    border-bottom-color: #f1e1e2;
   }
 }
 .nav-pills > li {
@@ -3622,7 +3622,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #ffffff;
+    border-bottom-color: #f1e1e2;
   }
 }
 .tab-content > .tab-pane {
@@ -4398,7 +4398,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.428571429;
-  background-color: #ffffff;
+  background-color: #f1e1e2;
   border: 1px solid #dddddd;
   border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
@@ -5829,13 +5829,11 @@ td.visible-print {
   background-color: #363636;
 }
 .wrapper #imagine {
-  background: red;
+  background: #c82329;
 }
 .wrapper #imagine img {
   height: 175px;
   width: 270px;
-  padding-right: -15px;
-  padding-left: 15px;
 }
 .wrapper .nav li:hover {
   background-color: #040404;
@@ -5888,5 +5886,23 @@ td.visible-print {
 }
 .post {
   border-top: 1px solid #ebeced;
-  border-bottom: 1px solid #ebeced;
+  margin-bottom: 30px;
+}
+.post img {
+  margin-bottom: 40px;
+}
+.post .category .cat {
+  height: 20px;
+}
+.post .category .cat p {
+  background: #d9ba5f;
+  position: absolute;
+  left: 0;
+  padding: 1px;
+}
+.post .category .share p {
+  background: red;
+  position: absolute;
+  right: 0;
+  padding: 1px;
 }

@@ -34,14 +34,18 @@
 
     }
 .wrapper #imagine{
-    background: red;
+    background: @kol-bg;
+   
 }
 .wrapper #imagine {
 img {
 	    height: @h;
 	    width: 270px;
-	    padding-right: -15px;
-	    padding-left: 15px;
+            
+	   
+	     
+    
+	    
 }
 }
 
@@ -92,5 +96,43 @@ img {
 
 .post {
     border-top: @post-line;
-    border-bottom:@post-line;
+    margin-bottom: 30px;
+    img {
+	margin-bottom: 40px;
+    }
+
+
+    
+    .category .cat {
+	height:20px;
+	
+
+	 p{
+	    
+	    background:@category-color;
+	    
+	    position: absolute;
+	    left: 0;
+	    padding: 1px;
+     
+	    
+	}
+	
+    }
+    .category .share {
+	
+
+	 p{
+	    
+	    background: red;
+	    
+	    position: absolute;
+	    right: 0;
+	    padding: 1px;
+     
+	    
+	}
+	
+    }
+
 }

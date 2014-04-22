@@ -8,7 +8,7 @@
     <!-- Bootstrap -->
     <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Wallpoet' rel='stylesheet' type='text/css'>
-    <link href="static/blog/www/css/styles.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}/blog/www/css/styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,10 +37,10 @@
 	
      <nav class="navbar navbar-default" id="navbar " >
        
-       <ul class="nav navbar-nav ">
-         <li><a href="/home/">Home</a></li>
-         <li><a href="/categorys/">Categories</a></li>
-         <li><a href="/services/">Services</a></li>
+       <ul class="nav navbar-nav">
+         <li class="hidden-sm hidden-xs"><a href="{% url 'blog:index'%}">Home</a></li>
+         <li class="hidden-sm hidden-xs"><a href="/categorys/">Categories</a></li>
+         <li class="hidden-sm hidden-xs"><a href="/services/">Services</a></li>
          <li><a href="/partners/">Partners</a></li>
          <li><a href="/customers/">Customers</a></li>
          <li><a href="/projects/">Projects</a></li>
@@ -82,7 +82,7 @@
 	    <div class="col-md-12 blogs">
 	      <div class="row">
 		   <div class="blog-category col-md-12">
-		     <h1> <small>Subtext for header</small></h1>
+		     
 		     {% block post %} {% endblock %}
 		     </div>
 		 </div>

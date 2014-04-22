@@ -4,34 +4,40 @@
 
 {% block post %}
 
-
+<h1> <small>Последние посты</small></h1>
 {% for post in post_list %}
  <div class="post">
    <div class="row">
-			 
-     <div class="col-md-2">
-       <p>HOMEMADE</p> 
-     </div>
+     
+     <div class="category col-md-12">
+     
+       <div class="cat col-md-2">
+	 <p>HOMEMADE</p> 
+       </div>
 
-     <div class="col-md-4 time">
-       <h4><small>{{ post.created|date:"D d M Y" }}</small></h4> 
-     </div>
+       <div class="col-md-4 time">
+	 <h4><small>{{ post.created|date:"D d M Y" }}</small></h4> 
+       </div>
 			 
-     <div class="col-md-2 col-md-offset-4 share">
-       <p>SHARE</p> 
-     </div>
+       <div class="col-md-2 col-md-offset-4 share">
+	 <p>SHARE</p> 
+       </div>
 			 
-     <div class="clearfix visible-md"></div>
+       <div class="clearfix visible-md"></div>
+     </div>
 			 
 
 
 
      <div class="col-md-12">
        <h3><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>
-       <p>{{ post.body|linebreaks }} </p>
+       <div class = "post_body">
+	 {{ post.body|safe|truncatewords:"14"|linebreaks }}
+	 <a href="{{ post.get_absolute_url }}">read more</a>
+       </div>
        
        
-       <img src="/static/blog/www/images/cologo.jpeg" class="img-thumbnail" alt="Responsive image">
+       <img src="/media/{{post.picture.name}}" class="img-thumbnail" alt="Responsive image">
 
 
        <p> Tags: 

@@ -23,7 +23,8 @@ class Category(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return "/{0}".format(self.title)
+        return "/{0}".format(self.title).lower()
+    
 
 
 class Post(AbstractTitleData):
@@ -45,7 +46,9 @@ class Post(AbstractTitleData):
         return self.title
 
     def get_absolute_url(self):
-        return "/post/{0}".format(self.id)
+        #return "/post/{0}".format(self.id)
+        return "/post/%i/" % self.id
+        
 
 
 class Tag(models.Model):
