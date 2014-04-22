@@ -5831,7 +5831,7 @@ td.visible-print {
 .wrapper #imagine {
   background: red;
 }
-.wrapper img {
+.wrapper #imagine img {
   height: 175px;
   width: 270px;
   padding-right: -15px;
@@ -5872,6 +5872,7 @@ td.visible-print {
   position: relative;
   margin-top: 20px;
   margin-bottom: 0;
+  background-color: white;
 }
 .border {
   height: 5px;
@@ -5882,5 +5883,10 @@ td.visible-print {
   margin-top: -5px;
 }
 .line {
+  margin-top: 20px;
   margin-bottom: 20px;
+}
+.post {
+  border-top: 1px solid #ebeced;
+  border-bottom: 1px solid #ebeced;
 }

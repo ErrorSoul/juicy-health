@@ -39,7 +39,7 @@
        
        <ul class="nav navbar-nav ">
          <li><a href="/home/">Home</a></li>
-         <li><a href="/about/">About us</a></li>
+         <li><a href="/categorys/">Categories</a></li>
          <li><a href="/services/">Services</a></li>
          <li><a href="/partners/">Partners</a></li>
          <li><a href="/customers/">Customers</a></li>
@@ -52,9 +52,11 @@
      </div> <!-- naver row --->
       
 	
-    <div class="col-md-12">
+    <div class="col-md-12 content-side">
       
       <div class="row boder">
+	
+
 	<div class="line">
  
 	  <div class="col-sm-6 col-md-3" id="greenline"> 
@@ -64,7 +66,8 @@
 	  <div class="col-sm-6 col-md-9" id="blackline"> 
 	    <p>FhHFHFH</p>
 	  </div>
-	</div>
+	
+	</div> <!-- line -->
       
 
 
@@ -72,25 +75,25 @@
 	<div class="col-md-8 block">
 	  <div class="border"> </div>
 	<div class="row">
-	    <div class="up page-header">
+	    
 	      
-	      <h1> <small>Subtext for header</small></h1>
-	    </div>
+	      
 	    
 	    <div class="col-md-12 blogs">
 	      <div class="row">
-		   <div class="blog-category col-md-2">
-		     <p>HOMEMADE</p>
-		   </div>
+		   <div class="blog-category col-md-12">
+		     <h1> <small>Subtext for header</small></h1>
+		     {% block post %} {% endblock %}
+		     </div>
 		 </div>
 	      </div> <!-- col-md-12 blogs -->
 	      
 	
-	    </div>
-      </div> <!--col-md-8-block-->
+	</div>
+	</div> <!--col-md-8-block-->
       </div>
       
-    </div><!--col-md-12-->
+    </div><!--12 content-side -->
       
       <div class="clearfix visible-xs"></div>
       
@@ -100,7 +103,32 @@
 	
     </div>
     
-    {% block post %} {% endblock %}
+    
+
+
+
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+
 
     </div> <!-- container -->
 

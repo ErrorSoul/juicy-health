@@ -36,13 +36,14 @@
 .wrapper #imagine{
     background: red;
 }
-.wrapper img {
+.wrapper #imagine {
+img {
 	    height: @h;
 	    width: 270px;
 	    padding-right: -15px;
 	    padding-left: 15px;
 }
-
+}
 
 .wrapper .nav li:hover{
     background-color: @navbar-default-bg ;
@@ -81,7 +82,15 @@
      .block;
      margin-top:20px;
      margin-bottom: 0;
+     background-color: white;
  }
  .border {.block-inside;}
 
-.line {margin-bottom:20px;}
+.line {
+    margin-top: 20px;
+    margin-bottom:20px;}
+
+.post {
+    border-top: @post-line;
+    border-bottom:@post-line;
+}
