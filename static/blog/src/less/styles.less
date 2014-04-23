@@ -3,9 +3,9 @@
 
 .p-line(@color) {
     text-align: center;
-    height: 30px;
+    min-height: 30px;
     background: @color;
-    margin-bottom: 20px;
+    
 }
 
 
@@ -23,6 +23,12 @@
     
 }
 
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .wrapper {
  background: @bg-color-main;
  
@@ -38,15 +44,10 @@
    
 }
 .wrapper #imagine {
-img {
+    img {
 	    height: @h;
 	    width: 270px;
-            
-	   
-	     
-    
-	    
-}
+            }
 }
 
 .wrapper .nav li:hover{
@@ -71,15 +72,15 @@ img {
     z-index: 1;
 }
 
-.wrapper #greenline {
-   .p-line(@ueba-green);
+.line-widget{
+    padding-bottom: 0;
+    #greenline {
+	.p-line(@ueba-green);
+    }
+    #blackline {
+	.p-line(black);
+    }
 }
-
-.wrapper #blackline {
-    .p-line(black);
-}
-   
-
 
 
 .block { 

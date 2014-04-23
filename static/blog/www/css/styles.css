@@ -5821,6 +5821,11 @@ td.visible-print {
 /*высота навигационного меню*/
 /*задаем  побольше горизонтальный отступ*/
 /*фон для пунктов меню*/
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .wrapper {
   background: #f1e1e2;
 }
@@ -5853,17 +5858,18 @@ td.visible-print {
   height: 78px;
   z-index: 1;
 }
-.wrapper #greenline {
-  text-align: center;
-  height: 30px;
-  background: #7eba27;
-  margin-bottom: 20px;
+.line-widget {
+  padding-bottom: 0;
 }
-.wrapper #blackline {
+.line-widget #greenline {
   text-align: center;
-  height: 30px;
+  min-height: 30px;
+  background: #7eba27;
+}
+.line-widget #blackline {
+  text-align: center;
+  min-height: 30px;
   background: #000000;
-  margin-bottom: 20px;
 }
 .block {
   border-top: 5px solid black;

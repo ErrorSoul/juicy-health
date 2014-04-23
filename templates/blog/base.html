@@ -23,9 +23,9 @@
       <div class=" row">
 	<div class="col-md-12 header">
 	
-	  <div class="col-md-3" id="imagine">
+	  <div class="col-md-3 " id="imagine">
 	    <div class="row">
-	      <a href="/home/"><img src="/static/blog/www/images/cologo.jpeg" ></a>
+	      <a href="/home/"><img class="center-block"  src="/static/blog/www/images/cologo.jpeg" ></a>
 	    </div>
 	  </div>
 
@@ -33,52 +33,23 @@
       
       </div>
       
-    <div class="naver row">
-	
-     <nav class="navbar navbar-default" id="navbar " >
-       
-       <ul class="nav navbar-nav">
-         <li class="hidden-sm hidden-xs"><a href="{% url 'blog:index'%}">Home</a></li>
-         <li class="hidden-sm hidden-xs"><a href="/categorys/">Categories</a></li>
-         <li class="hidden-sm hidden-xs"><a href="/services/">Services</a></li>
-         <li><a href="/partners/">Partners</a></li>
-         <li><a href="/customers/">Customers</a></li>
-         <li><a href="/projects/">Projects</a></li>
-         <li><a href="/careers/">Careers</a></li>
-         <li><a href="/contact/">Contact</a></li>			
-       </ul> 
-     </nav>
-     
-     </div> <!-- naver row --->
+{% include 'blog/navbar.html' %}
       
 	
-    <div class="col-md-12 content-side">
-      
-      <div class="row boder">
+    <div class="col-md-12 line-widget">
+      <div class="row">
+	<div class="col-xs-12 col-sm-3 col-md-3" id="greenline"> 
+	  <p>FhHFHFH</p>
+	</div>
+	<div class="col-xs-12  col-sm-9 col-md-9" id="blackline"> 
+	  <p>FhHFHFH</p>
+	</div>
+      </div><!-- row -->
+    </div> <!-- col-md-12 line-widget -->
 	
-
-	<div class="line">
- 
-	  <div class="col-sm-6 col-md-3" id="greenline"> 
-	    <p>FhHFHFH</p>
-	  </div>
-
-	  <div class="col-sm-6 col-md-9" id="blackline"> 
-	    <p>FhHFHFH</p>
-	  </div>
-	
-	</div> <!-- line -->
-      
-
-
-
-	<div class="col-md-8 block">
+    <div class="col-md-8 block">
 	  <div class="border"> </div>
-	<div class="row">
-	    
-	      
-	      
-	    
+	  <div class="row">
 	    <div class="col-md-12 blogs">
 	      <div class="row">
 		   <div class="blog-category col-md-12">
@@ -89,11 +60,9 @@
 	      </div> <!-- col-md-12 blogs -->
 	      
 	
-	</div>
-	</div> <!--col-md-8-block-->
-      </div>
-      
-    </div><!--12 content-side -->
+	  </div>
+    </div> <!--col-md-8-block-->
+   
       
       <div class="clearfix visible-xs"></div>
       
