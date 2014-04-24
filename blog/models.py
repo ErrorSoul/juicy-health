@@ -1,6 +1,6 @@
 #coding: utf-8
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 class AbstractDate(models.Model):
     created = models.DateTimeField(auto_now_add=True)
@@ -28,7 +28,7 @@ class Category(models.Model):
 
 
 class Post(AbstractTitleData):
-    body = models.TextField()
+    body = RichTextField(config_name='default')
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     picture = models.ImageField(upload_to='profile_images', blank=True)

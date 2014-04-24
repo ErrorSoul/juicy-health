@@ -29,7 +29,7 @@
      <div class="col-md-12">
        <h3><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>
         <img src="/media/{{post.picture.name}}" class="img-thumbnail" alt="Responsive image">
-       <p>{{ post.body }} </p>
+       <p>{{ post.body|safe }} </p>
        
        
        

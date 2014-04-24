@@ -10,9 +10,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     
-    url(r'^', include("blog.urls", namespace='blog')),
+    url(r'', include("blog.urls", namespace='blog')),
     url(r'^admin/', include(admin.site.urls)),
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+    url(r'^ckeditor/', include('ckeditor.urls')),
+) 
 
 urlpatterns += staticfiles_urlpatterns()
 
@@ -20,9 +21,9 @@ urlpatterns += staticfiles_urlpatterns()
 
 
 # UNDERNEATH your urlpatterns definition, add the following two lines:
-## if settings.DEBUG:
-##     urlpatterns += patterns(
-##         'django.views.static',
-##         (r'media/(?P<path>.*)',
-##         'serve',
-##         {'document_root': settings.MEDIA_ROOT}), )
+if settings.DEBUG:
+    urlpatterns += patterns(
+        'django.views.static',
+        (r'media/(?P<path>.*)',
+        'serve',
+        {'document_root': settings.MEDIA_ROOT}), )
