@@ -12,7 +12,13 @@ MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 
 CKEDITOR_UPLOAD_PATH =  "uploads/"
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Full',
+       
 
+    },
+}
 
 
 DEBUG = True
