@@ -5875,7 +5875,7 @@ td.visible-print {
   border-top: 5px solid black;
   position: relative;
   margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 40px;
   background-color: white;
 }
 .border {
