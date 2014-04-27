@@ -13,6 +13,15 @@ class CommentTagMixin(object):
         return context
 
 
+class CategoryMixin(object):
+    def get_context_data(self, **kwargs):
+        context = super(CategoryMixin,
+                        self).get_context_data(**kwargs)
+        context["categories"] = 1
+        
+        
+        
+
 class Posts(ListView):
     """
     Список всех доступных статей
@@ -31,6 +40,7 @@ class Posts(ListView):
     def get_queryset(self):
         queryset = self.model.objects.\
           all().prefetch_related('tags')
+        queryset.categories = Category.objects.all()
         return queryset
 
 

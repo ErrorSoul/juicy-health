@@ -1,6 +1,8 @@
 #coding: utf-8
 from django.db import models
+from django.core.urlresolvers import reverse
 from ckeditor.fields import RichTextField
+
 
 class AbstractDate(models.Model):
     created = models.DateTimeField(auto_now_add=True)
@@ -26,7 +28,6 @@ class Category(models.Model):
         return "/{0}".format(self.title).lower()
     
 
-
 class Post(AbstractTitleData):
     body = RichTextField(config_name='default')
     views = models.IntegerField(default=0)
@@ -47,7 +48,7 @@ class Post(AbstractTitleData):
 
     def get_absolute_url(self):
         #return "/post/{0}".format(self.id)
-        return "/post/%i/" % self.id
+        return reverse("blog:pt_detail", kwargs={"pk": self.pk})
         
 
 
