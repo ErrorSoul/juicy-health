@@ -1,5 +1,6 @@
 @import "bootstrap/bootstrap.less";
 @import "variables.less";
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic,cyrillic-ext);
 
 .p-line(@color) {
     text-align: center;
@@ -8,6 +9,11 @@
     
 }
 
+.category-style(@color) {
+    text-transform: uppercase;
+    background: @color;
+    color: white;
+}
 
 .block(){
     border-top: 5px solid black;
@@ -61,8 +67,8 @@
 }
 .wrapper .nav a {text-transform: uppercase;
             font-size:  22px;
-	    font-weight: 100;
-	    font-family: "Abel" sans-serif;
+	    font-weight: 50;
+	    font-family: 'Didact Gothic' sans-serif;
     }
 
 .wrapper .navbar {
@@ -77,7 +83,7 @@
 }
 
 .line-widget{
-    padding-bottom: 0;
+    
     #greenline {
 	.p-line(@ueba-green);
     }
@@ -103,39 +109,24 @@
     img {
 	margin-bottom: 40px;
     }
-
-
-    
-    .category .cat {
-	height:20px;
-	
-
-	 p{
-	    
-	    background:@category-color;
-	    
-	    position: absolute;
-	    left: 0;
-	    padding: 1px;
-     
-	    
+    .category  {
+	padding-left: 0;
+	padding-right: 0;
+	.time h4{margin-top: 0px;}
+	p {
+	    .category-style(red);
 	}
-	
     }
-    .category .share {
-	
-
-	 p{
-	    
-	    background: red;
-	    
-	    position: absolute;
-	    right: 0;
-	    padding: 1px;
-     
-	    
-	}
-	
-    }
-
 }
+
+#post {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#title{
+   
+     border-top: @post-line;
+    
+}
+

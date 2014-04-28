@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic,cyrillic-ext);
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5819,7 +5820,6 @@ td.visible-print {
   }
 }
 /*высота навигационного меню*/
-/*задаем  побольше горизонтальный отступ*/
 /*фон для пунктов меню*/
 .center-block {
   display: block;
@@ -5846,8 +5846,8 @@ td.visible-print {
 .wrapper .nav a {
   text-transform: uppercase;
   font-size: 22px;
-  font-weight: 100;
-  font-family: "Abel" sans-serif;
+  font-weight: 50;
+  font-family: 'Didact Gothic' sans-serif;
 }
 .wrapper .navbar {
   padding-left: 28px;
@@ -5857,9 +5857,6 @@ td.visible-print {
   top: 0;
   height: 78px;
   z-index: 1;
-}
-.line-widget {
-  padding-bottom: 0;
 }
 .line-widget #greenline {
   text-align: center;
@@ -5897,18 +5894,22 @@ td.visible-print {
 .post img {
   margin-bottom: 40px;
 }
-.post .category .cat {
-  height: 20px;
+.post .category {
+  padding-left: 0;
+  padding-right: 0;
 }
-.post .category .cat p {
-  background: #d9ba5f;
-  position: absolute;
-  left: 0;
-  padding: 1px;
+.post .category .time h4 {
+  margin-top: 0px;
 }
-.post .category .share p {
-  background: red;
-  position: absolute;
-  right: 0;
-  padding: 1px;
+.post .category p {
+  text-transform: uppercase;
+  background: #ff0000;
+  color: white;
+}
+#post {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#title {
+  border-top: 1px solid #ebeced;
 }
