@@ -4,23 +4,23 @@
 
 {% block post %}
 
-<h1> <small>Последние посты</small></h1>
+<h1> <small>ПОСЛЕДНИЕ ПОСТЫ</small></h1>
 {% for post in post_list %}
  <div class="post">
    <div class="row">
      
      <div class="category col-md-12">
      
-       <div class="cat col-md-2">
-	 <p>HOMEMADE</p> 
+       <div class="cat col-md-2 col-sm-2 col-xs-4 pull-left">
+	 <p class="pull-left">{{post.category}}</p> 
        </div>
 
-       <div class="col-md-4 time">
-	 <h4><small>{{ post.created|date:"D d M Y" }}</small></h4> 
+       <div class="col-md-3 col-sm-3 col-xs-4 time">
+	 <h4 class="pull-left"><small>{{ post.created|date:"M d, Y" }}</small></h4> 
        </div>
 			 
-       <div class="col-md-2 col-md-offset-4 share">
-	 <p>SHARE</p> 
+       <div class="col-md-2 col-sm-2 col-xs-4 pull-right share">
+	 <p class="pull-right">SHARE</p> 
        </div>
 			 
        <div class="clearfix visible-md"></div>
@@ -29,12 +29,12 @@
 
 
 
-     <div class="col-md-12">
+     <div class="col-md-12" id="qwe">
        <h3><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>
-       <div class = "post_body"
-         {% autoescape off %}
-	 {{ post.body|truncatewords:"50"|linebreaks}}
-         {% endautoescape %}
+
+       <div class="post_body" id="abs">
+	 {{ post.body|safe|truncatewords_html:"25"}}
+
 	 <a href="{{ post.get_absolute_url }}">read more</a>
 
        </div>
@@ -59,40 +59,6 @@
 
 
 
-<!--
-<div class='main'>
-
-<ul>
-   {% for post in post_list %}
-   <div class="title">
-     <h3><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h3>
-   </div>
-   <ul>
-     <div class="time">{{ post.created }}</div>
-     <div class="body">{{ post.body|linebreaks }}</div>
-     <div class ="tags">
-       <p> Tags: 
-       {% for tag in post.get_tags %}
-	 <a href="{{post.get_absolute_url}}">{{ tag }}</a>
-	 {% if not forloop.last %}
-	 |
-	 {% endif %}
-	 
-	   {% endfor %} </p>
-       <p> Comments: {{post.len_comments}} </p>
-       
-
-       
-     </div>
-   </ul>
-   {% empty %}
-   <p> Нет постов </p>
-   {% endfor %}
-</ul>
-
-</div>
-
--->
 
 
 

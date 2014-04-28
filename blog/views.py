@@ -17,12 +17,10 @@ class CategoryMixin(object):
     def get_context_data(self, **kwargs):
         context = super(CategoryMixin,
                         self).get_context_data(**kwargs)
-        context["categories"] = 1
-        
-        
-        
+        context["categories"] = self.categories
+        return context
 
-class Posts(ListView):
+class Posts(CategoryMixin, ListView):
     """
     Список всех доступных статей
     """
@@ -38,16 +36,23 @@ class Posts(ListView):
     paginate_by = 5
 
     def get_queryset(self):
-        queryset = self.model.objects.\
-          all().prefetch_related('tags')
-        queryset.categories = Category.objects.all()
+        queryset = self.model.objects.all().\
+          prefetch_related('tags')
+        self.categories = Category.objects.all()
         return queryset
 
 
-class PostDetailView(DetailView):
-        model = Post
-        #context_object_name = "post_list"
-        template_name = 'blog/post.html'
-        queryset = Post.objects.all().\
-          prefetch_related('tags')
+class PostDetailView(CategoryMixin, DetailView):
+    model = Post
+    template_name = 'blog/post.html'
+    queryset = Post.objects.all().\
+      prefetch_related('tags')
 
+    def get_object(self):
+        self.categories = Category.objects.all()
+        obj = super(PostDetailView,
+                    self).get_object()
+        return obj 
+        
+        
+         
